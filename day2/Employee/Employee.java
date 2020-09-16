@@ -17,7 +17,10 @@ public class Employee {
 		System.out.println("name = "+this.name);
 		System.out.println("id = "+this.id);
 		System.out.println("salary = "+this.salary);
-		System.out.println("Address = "+ address.city+ " "+ address.state+" "+address.pincode);
+		if(address!=null) {
+			System.out.println("Address = "+ address.city+ " "+ address.state+" "+address.pincode);
+		}
+		
 		
 		
 		System.out.println("----------------------------");
