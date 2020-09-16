@@ -19,6 +19,8 @@ public class Employee {
 		System.out.println("salary = "+this.salary);
 		if(address!=null) {
 			System.out.println("Address = "+ address.city+ " "+ address.state+" "+address.pincode);
+		}else {
+			System.out.println("Address not Available");
 		}
 		
 		
