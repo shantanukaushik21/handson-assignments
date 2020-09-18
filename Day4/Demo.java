@@ -21,5 +21,71 @@ public class Demo {
 		student1.getDetails();
 		student1.updateGrade("A");
 		student1.getDetails();
+		
 	}
+	
+	public static void display(People person) {
+		if(person instanceof Manager) {
+			Manager manager =(Manager)person;
+			manager.getDetails();
+		}
+		if(person instanceof Programmer) {
+			Programmer programmer =(Programmer)person;
+			programmer.getDetails();
+		}
+		if(person instanceof Admin) {
+			Admin admin =(Admin)person;
+			admin.getDetails();
+		}
+		if(person instanceof Customer) {
+			Customer customer=(Customer) person;
+			customer.getDetails();
+		}
+		if(person instanceof Student) {
+			Student student=(Student) person;
+			student.getDetails();
+		}
+		
+	}
+	public static void testUpdate(People person) {
+			
+			if(person instanceof Manager) {
+				
+				int bonus=15000;
+				Manager manager =(Manager)person;
+				manager.incrementSalary();
+				int newSalary=manager.getSalary()+bonus;
+				manager.updateSalary(newSalary);
+				manager.getDetails();
+				
+			}
+			if(person instanceof Programmer) {
+				
+				int bonus=10000;
+				Programmer programmer =(Programmer)person;
+				programmer.incrementSalary();
+				int newSalary=programmer.getSalary()+bonus;
+				programmer.updateSalary(newSalary);
+				programmer.getDetails();
+				
+			}
+			if(person instanceof Admin) {
+				
+				int bonus=10000;
+				Admin admin =(Admin)person;
+				admin.incrementSalary();
+				int newSalary=admin.getSalary()+bonus;
+				admin.updateSalary(newSalary);
+				admin.getDetails();
+				
+			}
+			if(person instanceof Customer) {
+				
+				int balance=10000;
+				Customer customer =(Customer)person;
+				customer.updateBalance(balance);
+				customer.getDetails();
+				
+			}
+		}
 }
